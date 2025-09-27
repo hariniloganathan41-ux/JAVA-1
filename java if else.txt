@@ -1,0 +1,377 @@
+Take two numbers a,b and return the bigger number.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      if(a>b){
+      System.out.println(+a);
+      }
+      else{
+        System.out.println(+b);
+      }
+  }
+}
+
+
+Take a number and return "ODD" if the number is odd and "EVEN" if the number is even
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      if(num%2==0){
+        System.out.println("EVEN");
+      }
+      else{
+        System.out.println("ODD");
+      }
+      
+  }
+}
+
+
+
+Take an integer as input and return "POSITIVE" if the integer is positive, "NEGATIVE" if the integer is negative and "ZERO" if the integer is zero.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      if(num>0){
+        System.out.println("POSITIVE");
+      }
+      else if(num<0){
+        System.out.println("NEGATIVE");
+      }
+      else{
+        System.out.println("ZERO");
+      }
+  }
+}
+
+
+Take an integer and return "YES" if the input is divisible by 3 or 5 or both. "NO" in all other cases
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      if((num%3==0) || (num%5==0)){
+        System.out.println("YES");
+      }
+      else{
+        System.out.println("NO");
+      }
+      
+  }
+}
+
+
+Take an integer and return its absolute value.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      System.out.println(Math.abs(num));
+      
+  }
+}
+
+
+Take 3 distinct integers a,b,c and return the integer of largest value.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      int c=sc.nextInt();
+      if((a>b)&&(a>c)){
+        System.out.println(+a);
+      }
+      else if((b>a)&&(b>c)){
+        System.out.println(+b);
+      }
+      else{
+        System.out.println(+c);
+      }
+  }
+}
+
+Take 4 distinct integers a,b,c, d and return the integer of largest value.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      int c=sc.nextInt();
+      int d=sc.nextInt();
+      if((a>b)&&(a>c)&&(a>d)){
+        System.out.println(+a);
+      }
+      else if((b>a)&&(b>c)&&(b>d)){
+        System.out.println(+b);
+      }
+      else if((c>a)&&(c>b)&&(c>d)){
+        System.out.println(+c);
+      }
+      else{
+        System.out.println(+d);
+      }
+  }
+}
+
+
+Take 3 distinct integers a,b,c as input and return the second smallest among the input.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        // Read three integers
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int secondSmallest;
+
+        // Check which is the second smallest
+        if ((a > b && a < c) || (a > c && a < b)) {
+            secondSmallest = a;
+        } else if ((b > a && b < c) || (b > c && b < a)) {
+            secondSmallest = b;
+        } else {
+            secondSmallest = c;
+        }
+
+        System.out.println(secondSmallest);
+  }
+}
+
+
+Take 3 integers A,B,C which denote the angles of a triangle, and return 'VALID' if the angles can form a valid triangle or 'NOT VALID' if the angles cannot form a valid triangle. Print the type of triangle in case it is valid
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        // Read three angles
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+
+        // Check if the angles form a valid triangle
+        if (A > 0 && B > 0 && C > 0 && (A + B + C == 180)) {
+            System.out.println("VALID");
+
+            // Determine the type of triangle
+            if (A == B && B == C) {
+                System.out.println("EQUILATERAL");
+            } else if (A == B || B == C || A == C) {
+                System.out.println("ISOSCELES");
+            } else {
+                System.out.println("SCALENE");
+            }
+
+        } else {
+            System.out.println("NOT VALID");
+            System.out.println();
+        }
+  }
+}
+
+
+Take a 4 digit integer denoting a year and print out "YES" if it is a leap year and "NO" if it is not a leap year.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int year=sc.nextInt();
+      if(((year%4==0)&&(year%100!=0))||(year%400==0)){
+        System.out.println("YES");
+      }
+      else{
+        System.out.println("NO");
+      }
+  }
+}
+
+
+Take a 3 digit integer, print "YES" if the reversed integer is equal to the input. Print "NO" otherwise.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        // Read the three-digit number
+        int num = sc.nextInt();
+
+        // Extract digits
+        int hundreds = num / 100;
+        int tens = (num / 10) % 10;
+        int units = num % 10;
+
+        // Reverse the number
+        int reversed = units * 100 + tens * 10 + hundreds;
+
+        // Check if reversed number equals original
+        if (num == reversed) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+  }
+}
+
+
+Take an integer ranging from 0 - 6 as input and print out the corresponding weekday. 0 corresponds to Sunday and 6 corresponds to Saturday.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      switch(num){
+        case 0:
+          System.out.println("Sunday");
+          break;
+        case 1:
+          System.out.println("Monday");
+          break;
+        case 2:
+          System.out.println("Tuesday");
+          break;
+        case 3:
+          System.out.println("Wednesday");
+          break;
+        case 4:
+          System.out.println("Thursday");
+          break;
+        case 5:
+          System.out.println("Friday");
+          break;
+        case 6:
+          System.out.println("Saturday");
+          break;
+        
+      }
+  }
+}
+
+
+Take marks in five subjects,find the average and return the corresponding grade .
+Rules for grade:
+Average > = 90 - A
+Average > = 80 and less than 90 - B
+Average > = 70 and less than 80 - C
+Average > = 50 and less than 70 - D
+Other cases: F
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      int c=sc.nextInt();
+      int d=sc.nextInt();
+      int e=sc.nextInt();
+      int avg=(a+b+c+d+e)/5;
+      if (avg >= 90) {
+            System.out.println("A");
+        } else if (avg >= 80) {
+            System.out.println("B");
+        } else if (avg >= 70) {
+            System.out.println("C");
+        } else if (avg >= 50) {
+            System.out.println("D");
+        } else {
+            System.out.println("F");
+        }
+  }
+}
+
+
+Enter a number and print "Hello" if divisible by 3. Print "World" if divisible by 5. And print "HelloWorld" if divisble by 15. Print "No" if the number is divisible by neither 3 nor 5.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      if(a%3==0){
+        System.out.println("Hello");
+      }
+      else if(a%5==0){
+        System.out.println("World");
+      }
+      else if(a%15==0){
+        System.out.println("HelloWorld");
+      }
+      else{
+        System.out.println("No");
+      }
+  }
+}
+
+
+Check if a number is even or odd and print it out. Use switch case to solve the problem.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      switch(num%2){
+        case 0:
+          System.out.println("EVEN");
+          break;
+        case 1:
+          System.out.println("ODD");
+          break;
+          
+      }
+  }
+}
+
