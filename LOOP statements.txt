@@ -1,0 +1,191 @@
+Write a program to take two integers as input and print the HCF and LCM of the two numbers.
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int hcf = 1;
+    for(int i = 1; i <=a && i<=b;i++){
+      if(i%a==0&&%i==0){
+        hcf=i;
+        
+      }
+    }
+    int lcm;
+    if(a==0||b==0){
+      lcm=0;
+    }
+    else{
+      lcm=(a*b)/hcf;
+    }
+    System.out.println(hcf);
+    System.out.println(lcm);
+    }
+  }
+
+Take a number as input and return the sum of all of its digits.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int sum,rem;
+      sum=0;
+      while(n>0){
+      rem=n%10;
+      sum=sum+rem;
+      n/=10;
+    }
+   
+    System.out.println(sum);
+  }
+}
+
+Take a number and return all the even digits of the number.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      boolean foundEven=false;
+      String numStr=String.valueOf(a);
+      for(int i=0;i<numStr.length();i++){
+        int digit=numStr.charAt(i)-'0';
+        if(digit%2==0){
+          System.out.println(digit);
+          foundEven=true;
+        }
+      }
+      if(!foundEven){
+        System.out.println(-1);
+      }
+  }
+}
+
+Take an integer an return 'YES' if the input is a palindrome, or 'NO' if it is not.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int rev=0,n1=n;
+      while(n>0){
+        rev=(rev*10)+n%10;
+        n=n/10;
+      }
+      if(n1==rev){
+        System.out.println("YES");
+      }
+      else{
+        System.out.println("NO");
+      }
+  }
+}
+
+Take a integer as input and return the number of zeroes in the input.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int count=0;
+      while(n>0){
+        int digit=n%10;
+        if(digit==0){
+          count++;
+          
+        }
+        n=n/10;
+        
+      }
+      System.out.println(count);
+      
+      
+  }
+}
+
+
+Take two integers as input and return all the prime numbers in between them (exclusive range).
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+      for(int i = a+1;i<b;i++){
+        boolean prime=true;
+        if(i<=1)
+        continue;
+        for(int j = 2;j<i/2;j++){
+          if(i%j==0){
+            prime=false;
+            break;
+          }
+        
+      }
+      if(prime){
+        
+      
+      
+      System.out.println(i);
+  }
+}
+}
+}
+
+
+Take an integer as input and print 'YES' if the number is a special number. Otherwise, print 'NO'.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      int fact=1,i;
+      if(fact>1){
+        fact=fact*1;
+        System.out.println("YES");
+      }
+      else{
+        System.out.println("NO");
+      }
+  }
+}
+
+For number from 1 to 100 if number is divisible by 3 print 'Hello' if divisible by 5 print 'World', if divisible by 15 print 'HelloWorld' else print the number itself
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      for(int i=1;i<=100;i++){
+      if(i%3==0 && i%15!=0){
+        System.out.println("Hello");
+      }
+      else if(i%5==0 && i%15!=0){
+        System.out.println("World");
+      }
+      else if(i%15==0){
+        System.out.println("HelloWorld");
+      }
+      else{
+        System.out.println(i);
+      }
+      }
+  }
+}
